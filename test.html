@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformers Cards - Test Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0a0e27;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    h1 {
+      color: #e31e24;
+      text-align: center;
+      font-family: 'Transformers Movie', Arial Black, sans-serif;
+      text-shadow: 0 0 10px rgba(227, 30, 36, 0.6);
+      letter-spacing: 3px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .card-label {
+      color: #fbbf24;
+      margin-bottom: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <h1>TRANSFORMERS CARDS - TEST INTERFACE</h1>
+  
+  <div class="container">
+    <!-- Status Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Status Card</div>
+      <transformers-status-card id="status-card"></transformers-status-card>
+    </div>
+
+    <!-- Sensor Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Sensor Card</div>
+      <transformers-sensor-card id="sensor-card"></transformers-sensor-card>
+    </div>
+
+    <!-- Button Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Button Card</div>
+      <transformers-button-card id="button-card"></transformers-button-card>
+    </div>
+
+    <!-- Text Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Text Card</div>
+      <transformers-text-card id="text-card"></transformers-text-card>
+    </div>
+
+    <!-- Gauge Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Gauge Card</div>
+      <transformers-gauge-card id="gauge-card"></transformers-gauge-card>
+    </div>
+
+    <!-- Clock Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Clock Card</div>
+      <transformers-clock-card id="clock-card"></transformers-clock-card>
+    </div>
+
+    <!-- Glance Card -->
+    <div class="card-wrapper full-width">
+      <div class="card-label">Glance Card</div>
+      <transformers-glance-card id="glance-card"></transformers-glance-card>
+    </div>
+
+    <!-- Light Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Light Card</div>
+      <transformers-light-card id="light-card"></transformers-light-card>
+    </div>
+
+    <!-- Picture Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Picture Card</div>
+      <transformers-picture-card id="picture-card"></transformers-picture-card>
+    </div>
+
+    <!-- Weather Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Weather Card</div>
+      <transformers-weather-card id="weather-card"></transformers-weather-card>
+    </div>
+
+    <!-- Alarm Card -->
+    <div class="card-wrapper">
+      <div class="card-label">Alarm Card</div>
+      <transformers-alarm-card id="alarm-card"></transformers-alarm-card>
+    </div>
+  </div>
+
+  <script type="module" src="./dist/transformers-cards.js"></script>
+  <script type="module">
+    // Mock Home Assistant object
+    const mockHass = {
+      states: {
+        'sensor.temperature': {
+          state: '22.5',
+          attributes: {
+            friendly_name: 'Living Room Temperature',
+            unit_of_measurement: '°C'
+          }
+        },
+        'sensor.humidity': {
+          state: '45',
+          attributes: {
+            friendly_name: 'Living Room Humidity',
+            unit_of_measurement: '%'
+          }
+        },
+        'sensor.cpu_usage': {
+          state: '45',
+          attributes: {
+            friendly_name: 'CPU Usage',
+            unit_of_measurement: '%'
+          }
+        },
+        'binary_sensor.front_door': {
+          state: 'off',
+          attributes: {
+            friendly_name: 'Front Door'
+          }
+        },
+        'binary_sensor.motion': {
+          state: 'on',
+          attributes: {
+            friendly_name: 'Motion Sensor'
+          }
+        },
+        'light.living_room': {
+          state: 'on',
+          attributes: {
+            friendly_name: 'Living Room Light',
+            brightness: 200,
+            supported_features: 1
+          }
+        },
+        'switch.coffee_maker': {
+          state: 'off',
+          attributes: {
+            friendly_name: 'Coffee Maker'
+          }
+        },
+        'camera.front_door': {
+          state: 'idle',
+          attributes: {
+            friendly_name: 'Front Door Camera',
+            entity_picture: 'https://via.placeholder.com/400x300/1a1f3a/e31e24?text=CAMERA+FEED'
+          }
+        },
+        'weather.home': {
+          state: 'sunny',
+          attributes: {
+            friendly_name: 'Home Weather',
+            temperature: 22,
+            humidity: 45,
+            pressure: 1013,
+            wind_speed: 12,
+            wind_bearing: 270,
+            forecast: [
+              { datetime: new Date().toISOString(), condition: 'sunny', temperature: 22 },
+              { datetime: new Date(Date.now() + 86400000).toISOString(), condition: 'cloudy', temperature: 20 },
+              { datetime: new Date(Date.now() + 172800000).toISOString(), condition: 'rainy', temperature: 18 },
+              { datetime: new Date(Date.now() + 259200000).toISOString(), condition: 'partlycloudy', temperature: 21 },
+              { datetime: new Date(Date.now() + 345600000).toISOString(), condition: 'sunny', temperature: 23 }
+            ]
+          }
+        },
+        'alarm_control_panel.home': {
+          state: 'disarmed',
+          attributes: {
+            friendly_name: 'Home Alarm'
+          }
+        }
+      },
+      config: {
+        unit_system: {
+          temperature: 'C',
+          wind_speed: 'km/h'
+        }
+      },
+      callService: (domain, service, data) => {
+        console.log(`Service called: ${domain}.${service}`, data);
+      }
+    };
+
+    // Initialize cards with mock configs
+    document.querySelector('#status-card').setConfig({
+      title: 'SYSTEM STATUS',
+      entities: [
+        { entity: 'sensor.temperature', name: 'AMBIENT TEMP' },
+        { entity: 'sensor.humidity', name: 'HUMIDITY' },
+        { entity: 'binary_sensor.front_door', name: 'FRONT DOOR' },
+        { entity: 'binary_sensor.motion', name: 'MOTION SENSOR' }
+      ],
+      message: 'ALL SYSTEMS OPERATIONAL',
+      show_message: true
+    });
+
+    document.querySelector('#sensor-card').setConfig({
+      entity: 'sensor.cpu_usage',
+      name: 'CPU USAGE',
+      show_graph: true,
+      max: 100
+    });
+
+    document.querySelector('#button-card').setConfig({
+      title: 'CONTROL PANEL',
+      columns: 2,
+      buttons: [
+        { entity: 'light.living_room', name: 'LIGHTS', icon: '💡', show_state: true },
+        { entity: 'switch.coffee_maker', name: 'COFFEE', icon: '☕', show_state: true }
+      ]
+    });
+
+    document.querySelector('#text-card').setConfig({
+      title: 'MISSION BRIEFING',
+      content: 'ATTENTION ALL AUTOBOTS\n\nMISSION PARAMETERS UPDATED\nPROCEED TO DESIGNATED COORDINATES\n\n- OPTIMUS PRIME',
+      size: 'medium',
+      align: 'left',
+      show_prompt: true
+    });
+
+    document.querySelector('#gauge-card').setConfig({
+      entity: 'sensor.cpu_usage',
+      name: 'CPU LOAD',
+      min: 0,
+      max: 100,
+      severity: {
+        yellow: 70,
+        red: 90
+      }
+    });
+
+    document.querySelector('#clock-card').setConfig({
+      title: 'SYSTEM TIME',
+      format_24h: true,
+      show_seconds: true,
+      show_date: true
+    });
+
+    document.querySelector('#glance-card').setConfig({
+      title: 'SYSTEM OVERVIEW',
+      entities: [
+        'sensor.temperature',
+        'sensor.humidity',
+        'binary_sensor.motion',
+        'light.living_room'
+      ],
+      columns: 4,
+      show_name: true
+    });
+
+    document.querySelector('#light-card').setConfig({
+      entity: 'light.living_room',
+      name: 'LIVING ROOM ILLUMINATION'
+    });
+
+    document.querySelector('#picture-card').setConfig({
+      title: 'VISUAL FEED',
+      entity: 'camera.front_door',
+      caption: 'SURVEILLANCE CAMERA 01',
+      show_timestamp: true
+    });
+
+    document.querySelector('#weather-card').setConfig({
+      entity: 'weather.home',
+      name: 'ATMOSPHERIC CONDITIONS',
+      show_forecast: true,
+      forecast_days: 5
+    });
+
+    document.querySelector('#alarm-card').setConfig({
+      title: 'SECURITY SYSTEM',
+      entity: 'alarm_control_panel.home',
+      show_keypad: true
+    });
+
+    // Set hass for all cards
+    document.querySelectorAll('[id$="-card"]').forEach(card => {
+      card.hass = mockHass;
+    });
+  </script>
+</body>
+</html>
