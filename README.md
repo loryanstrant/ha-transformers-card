@@ -8,6 +8,12 @@ A series of custom cards for Home Assistant inspired by the Transformers franchi
 
 These cards bring the futuristic aesthetic of Transformers and Cybertronian technology to your Home Assistant dashboard.
 
+## Screenshots
+
+![All Transformers Cards](screenshots/all-cards-overview.png)
+
+*All 11 card types in action, showcasing the Autobot-inspired design*
+
 ## Inspiration
 
 The design draws inspiration from:
@@ -71,6 +77,8 @@ For local development and testing:
 
 Displays multiple entity states in a structured list format with status indicators.
 
+![Status Card](screenshots/status-card.png)
+
 #### Configuration
 
 ```yaml
@@ -104,6 +112,8 @@ theme: autobot
 
 Displays a single sensor value with optional progress bar visualization.
 
+![Sensor Card](screenshots/sensor-card.png)
+
 #### Configuration
 
 ```yaml
@@ -128,6 +138,8 @@ max: 100
 ### 3. Button Card
 
 Interactive buttons for controlling entities or triggering services.
+
+![Button Card](screenshots/button-card.png)
 
 #### Configuration
 
@@ -170,6 +182,8 @@ Button configuration:
 ### 4. Text Card
 
 Displays text messages in Transformers terminal format with support for dynamic content.
+
+![Text Card](screenshots/text-card.png)
 
 #### Configuration
 
@@ -230,6 +244,8 @@ state_content:
 
 Displays a circular gauge visualization for numeric sensors with customizable thresholds.
 
+![Gauge Card](screenshots/gauge-card.png)
+
 #### Configuration
 
 ```yaml
@@ -260,6 +276,8 @@ severity:
 
 Displays current time and date in Transformers format with live updates.
 
+![Clock Card](screenshots/clock-card.png)
+
 #### Configuration
 
 ```yaml
@@ -284,6 +302,8 @@ show_timezone: false
 ### 7. Glance Card
 
 Compact multi-entity overview card displaying multiple entities in a grid.
+
+![Glance Card](screenshots/glance-card.png)
 
 #### Configuration
 
@@ -314,6 +334,8 @@ show_name: true
 
 Dedicated light entity control with brightness slider and on/off toggle.
 
+![Light Card](screenshots/light-card.png)
+
 #### Configuration
 
 ```yaml
@@ -332,6 +354,8 @@ name: MAIN ILLUMINATION
 ### 9. Picture Card
 
 Display images or camera feeds with Transformers-style filtering effects.
+
+![Picture Card](screenshots/picture-card.png)
 
 #### Configuration
 
@@ -361,6 +385,8 @@ camera_refresh_interval: 5
 
 Display weather information with current conditions and forecast.
 
+![Weather Card](screenshots/weather-card.png)
+
 #### Configuration
 
 ```yaml
@@ -383,6 +409,8 @@ forecast_days: 5
 ### 11. Alarm Card
 
 Control alarm systems with a Transformers-style keypad interface.
+
+![Alarm Card](screenshots/alarm-card.png)
 
 #### Configuration
 
