@@ -260,7 +260,9 @@ class TransformersWeatherCard extends TransformersBaseCard {
 
   _getWindDirection(degrees) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-    const index = Math.round(((degrees % 360) / 45)) % 8;
+    const degreesPerDirection = 45;
+    const numDirections = 8;
+    const index = Math.round(((degrees % 360) / degreesPerDirection)) % numDirections;
     return directions[index];
   }
 

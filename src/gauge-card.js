@@ -95,8 +95,9 @@ class TransformersGaugeCard extends TransformersBaseCard {
     const max = this.config.max || 100;
     const decimals = this.config.decimals !== undefined ? this.config.decimals : 1;
     
+    const gaugeRadius = 80;
     const percentage = Math.min(Math.max((value - min) / (max - min), 0), 1);
-    const circumference = 2 * Math.PI * 80;
+    const circumference = 2 * Math.PI * gaugeRadius;
     const strokeDashoffset = circumference * (1 - percentage);
 
     let severityClass = '';
@@ -118,13 +119,13 @@ class TransformersGaugeCard extends TransformersBaseCard {
                 class="gauge-background"
                 cx="100"
                 cy="100"
-                r="80"
+                r="${gaugeRadius}"
               />
               <circle
                 class="gauge-progress ${severityClass}"
                 cx="100"
                 cy="100"
-                r="80"
+                r="${gaugeRadius}"
                 stroke-dasharray="${circumference}"
                 stroke-dashoffset="${strokeDashoffset}"
                 transform="rotate(-90 100 100)"

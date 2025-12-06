@@ -616,7 +616,7 @@ const $=globalThis,w=$.trustedTypes,A=w?w.createPolicy("lit-html",{createHTML:t=
           white-space: nowrap;
           animation: typing 2s steps(40);
         }
-      `]}render(){if(!this.config||!this.hass)return B``;const t=this.config.title||"MESSAGE",e=this.config.size||"medium",r=this.config.align||"left",s=!1!==this.config.show_prompt,i=this.config.typing_effect||!1;let a=this.config.content||"";if(this.config.entity&&this.config.state_content){const t=this.hass.states[this.config.entity];if(t){const e=t.state;a=this.config.state_content[e]||this.config.state_content.default||a,a=a.replace(/\{\{state\}\}/g,t.state).replace(/\{\{friendly_name\}\}/g,t.attributes.friendly_name||this.config.entity).replace(/\{\{unit\}\}/g,t.attributes.unit_of_measurement||"");const r=a.matchAll(/\{\{attribute\.([^}]+)\}\}/g);for(const e of r){const r=e[1],s=t.attributes[r]||"";a=a.replace(e[0],s)}}}else if(this.config.entity){const t=this.hass.states[this.config.entity];if(t&&a){a=a.replace(/\{\{state\}\}/g,t.state).replace(/\{\{friendly_name\}\}/g,t.attributes.friendly_name||this.config.entity).replace(/\{\{unit\}\}/g,t.attributes.unit_of_measurement||"");const e=a.matchAll(/\{\{attribute\.([^}]+)\}\}/g);for(const r of e){const e=r[1],s=t.attributes[e]||"";a=a.replace(r[0],s)}}}const o=a.split("\n");return B`
+      `]}render(){if(!this.config||!this.hass)return B``;const t=this.config.title||"MESSAGE",e=this.config.size||"medium",r=this.config.align||"left",s=!1!==this.config.show_prompt,i=this.config.typing_effect||!1;let a=this.config.content||"";if(this.config.entity&&this.config.state_content){const t=this.hass.states[this.config.entity];if(t){const e=t.state;a=this.config.state_content[e]||this.config.state_content.default||a,a=a.replace(/\{\{state\}\}/g,t.state).replace(/\{\{friendly_name\}\}/g,t.attributes.friendly_name||this.config.entity).replace(/\{\{unit\}\}/g,t.attributes.unit_of_measurement||"");const r=Array.from(a.matchAll(/\{\{attribute\.([^}]+)\}\}/g));for(const e of r){const r=e[1],s=t.attributes[r]||"";a=a.replace(e[0],s)}}}else if(this.config.entity){const t=this.hass.states[this.config.entity];if(t&&a){a=a.replace(/\{\{state\}\}/g,t.state).replace(/\{\{friendly_name\}\}/g,t.attributes.friendly_name||this.config.entity).replace(/\{\{unit\}\}/g,t.attributes.unit_of_measurement||"");const e=Array.from(a.matchAll(/\{\{attribute\.([^}]+)\}\}/g));for(const r of e){const e=r[1],s=t.attributes[e]||"";a=a.replace(r[0],s)}}}const o=a.split("\n");return B`
       <div class="card">
         <div class="card-content">
           <div class="card-header">${t}</div>
@@ -707,13 +707,13 @@ const $=globalThis,w=$.trustedTypes,A=w?w.createPolicy("lit-html",{createHTML:t=
                 class="gauge-background"
                 cx="100"
                 cy="100"
-                r="80"
+                r="${80}"
               />
               <circle
                 class="gauge-progress ${p}"
                 cx="100"
                 cy="100"
-                r="80"
+                r="${80}"
                 stroke-dasharray="${l}"
                 stroke-dashoffset="${d}"
                 transform="rotate(-90 100 100)"

@@ -73,7 +73,7 @@ class TransformersTextCard extends TransformersBaseCard {
           .replace(/\{\{unit\}\}/g, entity.attributes.unit_of_measurement || '');
         
         // Handle attributes
-        const attrMatches = content.matchAll(/\{\{attribute\.([^}]+)\}\}/g);
+        const attrMatches = Array.from(content.matchAll(/\{\{attribute\.([^}]+)\}\}/g));
         for (const match of attrMatches) {
           const attrName = match[1];
           const attrValue = entity.attributes[attrName] || '';
@@ -88,7 +88,7 @@ class TransformersTextCard extends TransformersBaseCard {
           .replace(/\{\{friendly_name\}\}/g, entity.attributes.friendly_name || this.config.entity)
           .replace(/\{\{unit\}\}/g, entity.attributes.unit_of_measurement || '');
         
-        const attrMatches = content.matchAll(/\{\{attribute\.([^}]+)\}\}/g);
+        const attrMatches = Array.from(content.matchAll(/\{\{attribute\.([^}]+)\}\}/g));
         for (const match of attrMatches) {
           const attrName = match[1];
           const attrValue = entity.attributes[attrName] || '';
