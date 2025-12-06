@@ -1,0 +1,19 @@
+/* Transformers Movie Font - Authentic Transformers typography */
+/* License: Freeware, Non-Commercial */
+/* Source: https://www.fontspace.com/transformers-movie-font-f34560 */
+
+@font-face {
+  font-family: 'Transformers Movie';
+  src: url('./fonts/TransformersMovie-y9Ad.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Usage Note:
+   To use Transformers Movie font in your cards, set the CSS custom property:
+   --transformers-font-family: 'Transformers Movie', 'Arial Black', sans-serif;
+   
+   The font is perfect for headers and titles to give an authentic Transformers feel.
+   For body text, consider using a more readable monospace or sans-serif font.
+*/

@@ -1,0 +1,7 @@
+{
+  "name": "Transformers Cards",
+  "content_in_root": false,
+  "filename": "transformers-cards.js",
+  "render_readme": true,
+  "homeassistant": "2023.1.0"
+}
