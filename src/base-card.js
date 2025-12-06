@@ -12,7 +12,7 @@ export const baseStyles = css`
     --transformers-border-color: #e31e24;
     --transformers-text-color: #ffffff;
     --transformers-glow-color: rgba(227, 30, 36, 0.6);
-    --transformers-font-family: 'Courier New', 'Monaco', monospace;
+    --transformers-font-family: 'Transformers Movie', 'Arial Black', sans-serif;
     --transformers-header-font: 'Transformers Movie', 'Arial Black', sans-serif;
     --transformers-grid-opacity: 0.15;
   }

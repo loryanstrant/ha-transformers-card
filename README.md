@@ -442,18 +442,14 @@ All cards use CSS custom properties for easy theming:
 --transformers-border-color: #e31e24;         /* Border color */
 --transformers-text-color: #ffffff;           /* Text color */
 --transformers-glow-color: rgba(227, 30, 36, 0.6);  /* Glow effect */
---transformers-font-family: 'Courier New', 'Monaco', monospace;
+--transformers-font-family: 'Transformers Movie', 'Arial Black', sans-serif;
 --transformers-header-font: 'Transformers Movie', 'Arial Black', sans-serif;
 --transformers-grid-opacity: 0.15;            /* Grid pattern opacity */
 ```
 
 ### Transformers Movie Font
 
-The project includes the **Transformers Movie** font for authentic typography. The font is automatically loaded and can be enabled by setting the appropriate CSS custom property:
-
-```css
---transformers-header-font: 'Transformers Movie', 'Arial Black', sans-serif;
-```
+The project includes the **Transformers Movie** font for authentic typography. The font is automatically loaded and used throughout all cards for both headers and body text, providing a consistent Transformers aesthetic across all text areas.
 
 **Font License**: Freeware, Non-Commercial Use  
 **Source**: https://www.fontspace.com/transformers-movie-font-f34560

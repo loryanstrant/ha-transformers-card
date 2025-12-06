@@ -11,9 +11,9 @@
 }
 
 /* Usage Note:
-   To use Transformers Movie font in your cards, set the CSS custom property:
+   The Transformers Movie font is now used for all text areas across all cards
+   via the CSS custom property:
    --transformers-font-family: 'Transformers Movie', 'Arial Black', sans-serif;
    
-   The font is perfect for headers and titles to give an authentic Transformers feel.
-   For body text, consider using a more readable monospace or sans-serif font.
+   This provides an authentic Transformers aesthetic throughout the cards.
 */
