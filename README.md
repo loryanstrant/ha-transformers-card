@@ -8,9 +8,17 @@ A series of custom cards for Home Assistant inspired by the Transformers franchi
 
 These cards bring the futuristic aesthetic of Transformers and Cybertronian technology to your Home Assistant dashboard.
 
+Works best with the (Transformers theme)[https://github.com/loryanstrant/ha-transformers-theme] I created which includes the Transformers font.
+
 ## Screenshots
 
-![All Transformers Cards](screenshots/all-cards-overview.png)
+<img width="1607" height="740" alt="image" src="https://github.com/user-attachments/assets/bcb187f5-b504-4994-95e6-79bcd288b791" />
+
+<img width="1605" height="846" alt="image" src="https://github.com/user-attachments/assets/f5fa0a00-8e16-414e-9c99-e1b025fab60e" />
+
+<img width="495" height="397" alt="image" src="https://github.com/user-attachments/assets/3d94075b-495d-4714-88fa-0d31ba35d06f" />
+
+
 
 *All 11 card types in action, showcasing the Autobot-inspired design*
 
