@@ -1,6 +1,6 @@
 {
   "name": "ha-transformers-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A series of cards for Home Assistant in the style of Transformers and Teletraan-I",
   "main": "dist/transformers-cards.js",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loryanstrant/ha-transformers-card"
+    "url": "https://github.com/loryanstrant/ha-transformers-cards"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
