@@ -1,6 +1,11 @@
-![Transformers](https://img.shields.io/badge/Transformers-Cards-e31e24?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)
-![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Compatible-41BDF5?style=for-the-badge&logo=home-assistant)
-![License](https://img.shields.io/badge/License-MIT-e31e24?style=for-the-badge)
+**UPDATE: These cards have been superceded with a new integration called [Transformers Allspark UI](https://github.com/loryanstrant/HA-Transformers-Allspark-UI) which now includes:**
+- 4 Transformers themes from the [existing theme pack I created](https://github.com/loryanstrant/ha-transformers-theme) (which has also been archived)
+- 4 NEW Transformers G1 themes
+- Automatic installation of Transformers G1 and movie fonts
+- Improved cards to support font consistency throughout
+- Ability to choose whether cards use G1, movie, or theme fonts
+<br><br>
+
 
 # Transformers Cards for Home Assistant
 
