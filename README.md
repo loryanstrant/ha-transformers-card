@@ -1,4 +1,4 @@
-**UPDATE: These cards have been superceded with a new integration called [Transformers Allspark UI](https://github.com/loryanstrant/HA-Transformers-Allspark-UI) which now includes:**
+**UPDATE: These cards have been superseded by a new integration called [Transformers Allspark UI](https://github.com/loryanstrant/HA-Transformers-Allspark-UI) which now includes:**
 - 4 Transformers themes from the [existing theme pack I created](https://github.com/loryanstrant/ha-transformers-theme) (which has also been archived)
 - 4 NEW Transformers G1 themes
 - Automatic installation of Transformers G1 and movie fonts
