@@ -4,7 +4,7 @@
 - Automatic installation of Transformers G1 and movie fonts
 - Improved cards to support font consistency throughout
 - Ability to choose whether cards use G1, movie, or theme fonts
-<br><br>
+
 
 
 # Transformers Cards for Home Assistant
