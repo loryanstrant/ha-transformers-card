@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loryanstrant/ha-transformers-card"
+    "url": "https://github.com/loryanstrant/ha-transformers-cards"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
